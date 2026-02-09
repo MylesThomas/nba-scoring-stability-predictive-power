@@ -2,12 +2,36 @@
 
 Comparing box score statistics and ShotQuality expectation metrics to understand the randomness of single game samples to improve prediction accuracy.
 
-Link to my published article on RPubs website: https://rpubs.com/mylesthomas/predictive-power-nba-statistics
+**Published Article:** https://rpubs.com/mylesthomas/predictive-power-nba-statistics
 
-Find ShotQuality on Twitter: https://twitter.com/Shot_Quality
+## Quick Start
 
-Also check out ShotQualityBets!
+```bash
+git clone https://github.com/MylesThomas/nba-scoring-stability-predictive-power.git
+cd nba-scoring-stability-predictive-power
+Rscript install_packages.R  # Install dependencies
+Rscript render.R            # Generate HTML report
+```
 
-Twitter: https://twitter.com/ShotQualityBets
+**Need help?** See [`instructions.md`](instructions.md) for:
+- Prerequisites (R, pandoc)
+- Troubleshooting
+- RStudio workflow
+- Cursor/VSCode setup
 
-Betting website: https://shotqualitybets.com
+## About
+
+**ShotQuality Links:**
+- Twitter: [@Shot_Quality](https://twitter.com/Shot_Quality)
+- Betting: [@ShotQualityBets](https://twitter.com/ShotQualityBets) | [shotqualitybets.com](https://shotqualitybets.com)
+
+## Project Structure
+```
+.
+├── install_packages.R    # Install R dependencies
+├── render.R              # Render analysis to HTML
+├── instructions.md       # Detailed setup guide
+└── src/
+    ├── 00_INPUT/        # Input data
+    └── 03_CODE/         # R Markdown analysis
+```

@@ -18,8 +18,8 @@ knitr::opts_chunk$set(
   message = FALSE, 
   warning = FALSE, 
   include = FALSE,
-  dpi = 300, 
-  tidy = 'styler'
+  dpi = 300
+  # tidy = 'styler'  # Disabled: optional code formatting
 )
 
 options(scipen = 999)
@@ -41,8 +41,9 @@ library(here)
 library(glue)
 
 # Project directory/file path management
-SCRIPT_DIR = dirname(rstudioapi::getSourceEditorContext()$path)
-PARENT_DIR = dirname(SCRIPT_DIR)
+# Using here::here() for cross-platform compatibility (works in RStudio and Cursor)
+SCRIPT_DIR = here::here("src", "03_CODE")
+PARENT_DIR = here::here("src")
 INPUT_DIR = file.path(PARENT_DIR, "00_INPUT/")
 INTER_DIR = file.path(PARENT_DIR, "01_INTERMEDIATE/")
 OUTPUT_DIR = file.path(PARENT_DIR, "02_OUTPUT/")
